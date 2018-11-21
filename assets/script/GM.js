@@ -42,7 +42,8 @@ cc.Class({
         this.lose_node.active = false;
         this.win_node.active = true;
         this.gameover = true;
-        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
+        jsb.reflection.callStaticMethod("AppController", "game2NativeShow");//ios
+       // jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
     },
     //游戏结束--失败
     GameisLose() {
@@ -59,7 +60,8 @@ cc.Class({
         this.creatLevel(this.num);
         this.gameover = false;
         this.food_count = 0;
-        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
+        jsb.reflection.callStaticMethod("AppController", "game2NativeShow");//ios
+        //jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
     },
 
     //返回选择关卡画面
@@ -70,7 +72,8 @@ cc.Class({
         this.clearlevel();
         var leveNode = this.node.getChildByName('level');
         leveNode.active = true;
-        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
+        jsb.reflection.callStaticMethod("AppController", "game2NativeShow");//ios
+      //  jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
     },
     //下一关
     nextlevel() {
@@ -80,7 +83,8 @@ cc.Class({
         this.gameover = false;
         this.food_count = 0;
         this.buttonwinorlose_node.active = false;
-        jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
+        jsb.reflection.callStaticMethod("AppController", "game2NativeShow");//ios
+//jsb.reflection.callStaticMethod("org/cocos2dx/javascript/AppActivity","showInter","()V");
     },
 
     //2寻找player节点，并且统计food个数
