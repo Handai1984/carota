@@ -19,7 +19,7 @@
     "portrait": true,
     "upsideDown": false
   },
-  "packageName": "org.cocos2d.carota",
+  "packageName": "org.cocos2d.carota.huawei",
   "privateKey": "",
   "qqplay": {
     "REMOTE_SERVER_ROOT": "",
